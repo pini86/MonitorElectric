@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  max-width: 900px;
+  white-space: pre-wrap;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-around;
+}

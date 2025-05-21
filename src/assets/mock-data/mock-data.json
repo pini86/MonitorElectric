@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "date": "2025-05-18T07:20:40.070Z",
+        "source": "АСКУЭ",
+        "phase": "ab",
+        "paramU": 33.27,
+        "paramI": 34.74,
+        "paramP": 19.44,
+        "paramQ": 24.06,
+        "paramCos": 0.66
+    },
+    {
+        "id": 2,
+        "date": "2025-05-02T18:39:29.149Z",
+        "source": "SCADA",
+        "phase": "b",
+        "paramU": 17.32,
+        "paramI": 87.9,
+        "paramP": 78.89,
+        "paramQ": 20.57,
+        "paramCos": 0.67
+    },
+    {
+        "id": 3,
+        "date": "2025-05-09T14:00:13.297Z",
+        "source": "SCADA",
+        "phase": "-",
+         "paramU": null,
+        "paramI": null,
+        "paramP": null,
+        "paramQ": null,
+        "paramCos": null
+    },
+    {
+        "id": 4,
+        "date": "2025-04-22T20:02:00.863Z",
+        "source": "АСКУЭ",
+        "phase": "b",
+        "paramU": 31.03,
+        "paramI": 76.36,
+        "paramP": 82.2,
+        "paramQ": 65.07,
+        "paramCos": 0.51
+    },
+    {
+        "id": 5,
+        "date": "2025-04-28T23:12:08.988Z",
+        "source": "Оператор",
+        "phase": "-",
+        "paramU": null,
+        "paramI": null,
+        "paramP": null,
+        "paramQ": null,
+        "paramCos": null
+    },
+    {
+        "id": 6,
+        "date": "2025-05-11T09:52:35.957Z",
+        "source": "АСКУЭ",
+        "phase": "b",
+        "paramU": 54.12,
+        "paramI": 87.45,
+        "paramP": 30.03,
+        "paramQ": 9.9,
+        "paramCos": 0.68
+    },
+    {
+        "id": 7,
+        "date": "2025-05-01T03:01:16.105Z",
+        "source": "АСКУЭ",
+        "phase": "ab",
+        "paramU": 93.37,
+        "paramI": 1.74,
+        "paramP": 78.29,
+        "paramQ": 1.9,
+        "paramCos": 0.5
+    },
+    {
+        "id": 8,
+        "date": "2025-05-02T06:31:17.134Z",
+        "source": "Регистратор",
+        "phase": "ab",
+        "paramU": 30.5,
+        "paramI": 35.67,
+        "paramP": 31.24,
+        "paramQ": 59.45,
+        "paramCos": 0.61
+    },
+    {
+        "id": 9,
+        "date": "2025-05-10T03:05:47.455Z",
+        "source": "АСКУЭ",
+        "phase": "b",
+        "paramU": 76.94,
+        "paramI": 85.74,
+        "paramP": 56.54,
+        "paramQ": 71.12,
+        "paramCos": 0.66
+    },
+    {
+        "id": 10,
+        "date": "2025-05-01T03:19:19.898Z",
+        "source": "SCADA",
+        "phase": "ab",
+        "paramU": 1.16,
+        "paramI": 5.43,
+        "paramP": 35.51,
+        "paramQ": 12.83,
+        "paramCos": 0.61
+    }
+]

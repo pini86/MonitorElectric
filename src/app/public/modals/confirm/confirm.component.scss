@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  max-width: 900px;
+}
+
+[mat-dialog-content] {
+  white-space: pre-wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}

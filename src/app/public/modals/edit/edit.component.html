@@ -1,0 +1,55 @@
+<ng-container>
+  <div mat-dialog-content class="form-container">
+    <mat-form-field>
+      <mat-label>Источник</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Источник"
+        [formControl]="sourceControl"
+      />
+
+      <mat-error>Неверный источник</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Дата</mat-label>
+      <input matInput [matDatepicker]="picker" [formControl]="dateControl" />
+
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Время</mat-label>
+      <input
+        matInput
+        placeholder="Время"
+        [formControl]="timeControl"
+        type="time"
+        step="1000"
+      />
+
+      <mat-error>Неверное время</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions class="button-container">
+    <button type="button" mat-raised-button [mat-dialog-close]="false">
+      Отмена
+    </button>
+    <button
+      type="button"
+      mat-raised-button
+      (click)="saveForm()"
+      [disabled]="
+        !timeControl.valid || !dateControl.valid || !sourceControl.valid
+      "
+    >
+      Сохранить
+    </button>
+  </div>
+</ng-container>
