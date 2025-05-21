@@ -7,5 +7,5 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConfirmComponent {
-  readonly data = inject<{ message: string }>(MAT_DIALOG_DATA);
+  readonly dialogData = inject<{ message: string }>(MAT_DIALOG_DATA);
 }

@@ -38,11 +38,8 @@
   </div>
 
   <div mat-dialog-actions class="button-container">
-    <button type="button" mat-raised-button [mat-dialog-close]="false">
-      Отмена
-    </button>
+    <button mat-raised-button [mat-dialog-close]="false">Отмена</button>
     <button
-      type="button"
       mat-raised-button
       (click)="saveForm()"
       [disabled]="

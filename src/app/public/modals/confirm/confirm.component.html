@@ -1,17 +1,10 @@
 <ng-container>
   <div mat-dialog-title>Подтвердите действие:</div>
-  <div mat-dialog-content>{{ data.message }}</div>
+  <div mat-dialog-content>{{ dialogData.message }}</div>
 
   <div class="button-container" mat-dialog-actions>
-    <button type="button" mat-raised-button [mat-dialog-close]="false">
-      Нет
-    </button>
-    <button
-      type="button"
-      mat-raised-button
-      [mat-dialog-close]="true"
-      cdkFocusInitial
-    >
+    <button mat-raised-button [mat-dialog-close]="false">Нет</button>
+    <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial>
       Да
     </button>
   </div>

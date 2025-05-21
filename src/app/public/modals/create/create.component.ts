@@ -17,17 +17,17 @@ import { generateItemData } from '../../../shared/utils/utils';
 export class CreateComponent implements OnInit {
   readonly #dialogRef = inject(MatDialogRef);
 
-  data: ZamerItem | undefined;
+  itemData: ZamerItem | undefined;
 
   readonly sourceControl = new FormControl<string>('', [Validators.required]);
 
-  ngOnInit() {
-    this.data = generateItemData();
+  ngOnInit(): void {
+    this.itemData = generateItemData();
   }
 
-  saveForm() {
+  saveForm(): void {
     const result = {
-      ...this.data,
+      ...this.itemData,
       source: this.sourceControl.value,
     };
 

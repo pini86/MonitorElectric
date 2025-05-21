@@ -13,28 +13,22 @@ const blankZamerItem: ZamerItem = {
 };
 
 export function generateItemData(): ZamerItem {
-  let data = {
+  const generatedItem: ZamerItem = {
     ...blankZamerItem,
-    ...{
-      id: getRandomInt(1, 10000),
-      date: String(new Date()),
-      phase: getRandomPhase(),
-    },
+    id: getRandomInt(1, 10000),
+    date: String(new Date()),
+    phase: getRandomPhase(),
   };
 
-  if (data.phase !== '-') {
-    data = {
-      ...data,
-      ...{
-        paramU: getRandomFloat(0.22, 100),
-        paramI: getRandomFloat(0, 100),
-        paramP: getRandomFloat(0, 100),
-        paramQ: getRandomFloat(0, 100),
-        paramCos: getRandomFloat(0.5, 0.8),
-      },
-    };
+  if (generatedItem.phase !== '-') {
+    generatedItem.paramU = getRandomFloat(0.22, 100);
+    generatedItem.paramI = getRandomFloat(0, 100);
+    generatedItem.paramP = getRandomFloat(0, 100);
+    generatedItem.paramQ = getRandomFloat(0, 100);
+    generatedItem.paramCos = getRandomFloat(0.5, 0.8);
   }
-  return data;
+
+  return generatedItem;
 }
 
 function getRandomInt(min: number, max: number): number {

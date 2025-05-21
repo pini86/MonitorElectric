@@ -49,6 +49,7 @@ export class DashboardComponent {
   isAllSelected(): boolean {
     const numSelected = this.selection.selected.length;
     const numRows = this.data.length;
+
     return numSelected === numRows;
   }
 
@@ -65,6 +66,7 @@ export class DashboardComponent {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
+
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${
       row.id + 1
     }`;
@@ -72,6 +74,7 @@ export class DashboardComponent {
 
   getFormattedDate(dateString: string): string {
     const date = new Date(dateString);
+
     return `${String(date.getDate()).padStart(2, '0')}.${String(
       date.getMonth() + 1
     ).padStart(2, '0')}.${date.getFullYear()}`;
@@ -81,7 +84,7 @@ export class DashboardComponent {
     return new Date(dateString).toLocaleTimeString();
   }
 
-  removeItems(): void {
+  removeSelectedItems(): void {
     if (this.selection.isEmpty()) {
       return;
     }
@@ -98,7 +101,7 @@ export class DashboardComponent {
       });
   }
 
-  editItem(): void {
+  editSelectedItem(): void {
     if (this.selection.isEmpty() || this.selection.selected.length !== 1) {
       return;
     }

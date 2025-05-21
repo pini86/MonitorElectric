@@ -15,7 +15,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class EditComponent implements OnInit {
   readonly #dialogRef = inject(MatDialogRef);
-  readonly data = inject<{ item: ZamerItem }>(MAT_DIALOG_DATA).item;
+  readonly itemData = inject<{ item: ZamerItem }>(MAT_DIALOG_DATA).item;
 
   readonly dateControl = new FormControl<Date>(new Date(), [
     Validators.required,
@@ -23,7 +23,7 @@ export class EditComponent implements OnInit {
   readonly timeControl = new FormControl<string>('', [Validators.required]);
   readonly sourceControl = new FormControl<string>('', [Validators.required]);
 
-  ngOnInit() {
+  ngOnInit(): void {
     this._handleFormData();
   }
 
@@ -39,7 +39,7 @@ export class EditComponent implements OnInit {
     date.setSeconds(seconds);
 
     const result = {
-      ...this.data,
+      ...this.itemData,
       date,
       source: this.sourceControl.value,
     };
@@ -48,8 +48,8 @@ export class EditComponent implements OnInit {
   }
 
   private _handleFormData(): void {
-    this.dateControl.setValue(new Date(this.data.date));
-    this.timeControl.setValue(new Date(this.data.date).toLocaleTimeString());
-    this.sourceControl.setValue(this.data.source);
+    this.dateControl.setValue(new Date(this.itemData.date));
+    this.timeControl.setValue(new Date(this.itemData.date).toLocaleTimeString());
+    this.sourceControl.setValue(this.itemData.source);
   }
 }

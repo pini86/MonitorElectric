@@ -1,4 +1,4 @@
-<ng-container *ngIf="data">
+<ng-container *ngIf="itemData">
   <div mat-dialog-content class="form-container">
     <mat-form-field>
       <mat-label>Источник</mat-label>
@@ -13,36 +13,31 @@
     </mat-form-field>
 
     <mat-list role="list">
-      <mat-list-item role="listitem"
-        >Дата : {{ getFormattedDate(data.date) }}</mat-list-item
-      >
+      <mat-list-item role="listitem">Дата : {{ getFormattedDate(itemData.date) }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem"
-        >Время : {{ getFormattedTime(data.date) }}</mat-list-item
-      >
+      <mat-list-item role="listitem">Время : {{ getFormattedTime(itemData.date) }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem">Фаза : {{ data.phase }}</mat-list-item>
+      <mat-list-item role="listitem">Фаза : {{ itemData.phase }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem">U, кВ : {{ data.paramU }}</mat-list-item>
+      <mat-list-item role="listitem">U, кВ : {{ itemData.paramU }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem">I, A : {{ data.paramI }}</mat-list-item>
+      <mat-list-item role="listitem">I, A : {{ itemData.paramI }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem">P, МВт : {{ data.paramP }}</mat-list-item>
+      <mat-list-item role="listitem">P, МВт : {{ itemData.paramP }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem">I, A : {{ data.paramI }}</mat-list-item>
+      <mat-list-item role="listitem">I, A : {{ itemData.paramI }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem">Q, Мвар : {{ data.paramQ }}</mat-list-item>
+      <mat-list-item role="listitem">Q, Мвар : {{ itemData.paramQ }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item role="listitem">cos φ : {{ data.paramCos }}</mat-list-item>
+      <mat-list-item role="listitem">cos φ : {{ itemData.paramCos }}</mat-list-item>
     </mat-list>
   </div>
 
   <div mat-dialog-actions class="button-container">
-    <button type="button" mat-raised-button [mat-dialog-close]="false">
+    <button mat-raised-button [mat-dialog-close]="false">
       Отмена
     </button>
     <button
-      type="button"
       mat-raised-button
       (click)="saveForm()"
       [disabled]="!sourceControl.valid"
@@ -52,14 +47,14 @@
   </div>
 </ng-container>
 
-<ng-container *ngIf="!data">
+<ng-container *ngIf="!itemData">
   <div class="form-container">
     <mat-list role="list">
       <mat-list-item role="listitem">Нет данных</mat-list-item>
     </mat-list>
   </div>
   <div mat-dialog-actions class="button-container">
-    <button type="button" mat-raised-button [mat-dialog-close]="false">
+    <button mat-raised-button [mat-dialog-close]="false">
       Отмена
     </button>
   </div>
